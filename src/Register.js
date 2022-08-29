@@ -1,14 +1,14 @@
 import React from 'react'
-import signup from '../src/register.svg'
+import register from '../src/register.jpg'
 import { AiFillEyeInvisible } from 'react-icons/ai';
-// import { FaBeer } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
     <div>
       <div className="register">
         <div className="registerimg">
-          <img src={signup} alt='signup' id='imgregister'></img>
+          <img src={register} alt='register' ></img>
         </div>
         <div className="formregister" >
           <h2> Welcome to Bola's Cafe!</h2>
@@ -33,7 +33,7 @@ const Register = () => {
          /><AiFillEyeInvisible/><br/><br/>
    </form>
    <buttton className='button'> SIGN UP</buttton>
-    <p>Already have an account. LOGIN</p></div>
+    <p className="p">Already have an account. <Link to="/Login">LOGIN</Link> </p></div>
  
     </div>
     </div>

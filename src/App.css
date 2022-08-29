@@ -106,7 +106,7 @@ color: #00302E;
 .imglogin{
   width: 50%;
 opacity: 0.5;
-
+background-size: 10%;
 }
 .formlogin{
   align-items: center;
@@ -114,7 +114,7 @@ opacity: 0.5;
   flex-direction: column;
   display: flex;
   width: 50%;
-
+  margin-top: 20px;
 }
  input{
   padding: 20px;
@@ -129,7 +129,10 @@ input:focus {
 .button{
   background-color: #00302E;
   color: azure;
-  
+  padding:10px;
+   width: 150px;
+   border-radius: 7px;
+   text-align: center;
 }
 .register{
   display: flex;
@@ -147,17 +150,26 @@ color: hwb(178 0% 81%);
 .registerimg{
   width: 100%;
 opacity: 0.5;
-height: 100%;
+height: 60%;
 
 }
+
 .formregister{
   align-items: center;
   justify-content:right;
   flex-direction: column;
   display: flex;
   width: 50%;
-  
+  margin-top: 20px;
 }
-.forget{
+p{
+  font-size: 17px;
+  margin-left: 28px ;
+}
+.para {
+  display: flex;
 
+}
+.p{
+  text-decoration: none;
 }
