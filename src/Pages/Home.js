@@ -16,7 +16,7 @@ export const Home = () => {
    
     <div className='menupage'>
          <Menu/>
-         <h1 className='head'> Order <span>food </span> anytime,<br/> anywhere</h1>
+         <h1 className='head'> Order <span className='spanfood'>food </span> anytime,<br/> anywhere</h1>
          <p className='browse'>Browse from our list of specials to place your order and have food delivered<br/>
           to you in no time. Affordable, tasty and fast!</p>
        <div className="android"><img src={android} alt ="android"></img>

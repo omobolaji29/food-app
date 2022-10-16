@@ -1,9 +1,20 @@
 import React from 'react'
+import  { useState } from 'react'
 import register from '../Images/register.jpg'
-import { AiFillEyeInvisible } from 'react-icons/ai';
+import {AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+  
+const [passwordType, setpasswordType] = useState("password");
+const togglePassword = (e) => {
+  e.preventDefault();
+  if (passwordType === "password") {
+    setpasswordType("text");
+    return;
+  }
+  setpasswordType("password");
+};
   return (
     <>
       <div className="register">
@@ -17,20 +28,26 @@ const Register = () => {
          type ="text"
          required
          placeholder="Your First Name:"
+         name="name"
          /><br/><br/>
    
         <input
          type ="email"
          required
          placeholder="Your Email Name:"
+         name="email"
          /><br/><br/>
     
         <input
-         type ="password"
          required 
          placeholder="Your Password:"
-         
-         /><AiFillEyeInvisible/><br/><br/>
+         id="password"
+         type={passwordType}
+         name="password"
+         />{passwordType === "password" ?
+         <AiFillEye className="btnShow" onClick={togglePassword}/> :
+         <AiFillEyeInvisible className="btnShow" onClick={togglePassword}/>
+       }
    </form>
    <buttton className='button'> SIGN UP</buttton>
     <p className="p">Already have an account. <Link to="/Login">LOGIN</Link> </p></div>

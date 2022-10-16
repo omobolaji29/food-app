@@ -3,24 +3,26 @@
 
 body{
   margin: 0px;
+  text-decoration: none;
+}
+div{
+  text-decoration: none;
 }
 .menupage{
-
   background-color: #00302E;
   font-family: poppins;
-  color:azure;
-  
-  
+  color:azure; 
+}
+.spanfood{
+  color:#FBDDBB;
 }
 .head{
   font-size: 54px;
   margin-left: 35px;
-
 }
 .android{
   margin-left: 30px;
 }
-
 .browse{
   font-size: 20px;
   margin-left: 35px;
@@ -38,28 +40,29 @@ border-radius: 400px;
   align-items: center;
   padding: 20px;
   margin:0 auto;
-  border-bottom: 1px solid #f2f2f2;
+ 
 }
-.navbar-color{
-  background-color:rgba(251, 251, 251, 1);
-  padding: 10px;
-}
+
 .navbar .links{
-  margin-left: auto;
+  margin-top: 5px;
 }
 .navbar a{
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
   color: azure;
+} 
+.links{
+margin-left: 750px;
 }
 .food4{
   border-radius: 400px;
 }
 .links :hover{ 
-color: #E2B887;
-border-bottom: 3px solid #E2B887;
+color: #FBDDBB;
+border-bottom: 3px solid #FBDDBB;
 }
+
 .itemNotify {
   background-color: #E2B887;
   padding: 7px;
@@ -78,16 +81,18 @@ border-bottom: 3px solid #E2B887;
   font-size: 20px;
 }
 .foods{
-  
-    display:flex;
+      display:flex;
     justify-content: space-around;
-
+    text-align: center;
+  }
+  .foods h2{
+    color:#FBDDBB;
   }
  .footer{
   display: flex;
  justify-content: space-around;
  border-bottom: 1px solid #f2f2f2;
-text-align:left;
+text-align:right;
  }
  footer{
   background-color: #0b0d17;
@@ -130,13 +135,10 @@ background-size: 10%;
  input{
   padding: 20px;
   border-radius: 4px;
- 
 }
 input:focus {
   background-color: #00302E;
-
 }
-
 .button{
   background-color: #00302E;
   color: azure;
@@ -189,14 +191,49 @@ p{
   display: flex;
   position: relative;
 }
-.sidebar-link {
-  display: flex;
-  flex-direction: row;
-background-color:rgba(251, 251, 251, 1);
-width:15%;
-margin-left: 15px;
+
+.lefts{
+  background-color: whitesmoke;
+  width:20%;
+  height: 880px;
+ font-family: poppins;
+}
+.sidebar-link{
+    justify-content: space-between;
+    margin: 0px auto;
+    color: #707070;
+  }
+  /* this is the go back icon on profile page  */
+.go-back{
+  position: absolute;
+  right:80%;
+  top:60px;
+  font-size: 30px;
+}
+ 
+ul{
+  list-style: none;
+}
+.sidebar-links{
+  margin-top: 20px;
 
 }
+.sidebar-links button{
+  border: none;
+  outline: none;
+  
+}
+
+.sidebar-links button:hover{
+  background-color:grey;
+}
+.sidebar-links:hover{
+ border-radius: 4px;
+ background-color:grey;
+padding: 7px;
+width: 170px;
+}
+
 .narbar-greet{
   padding:100px;
   padding-top:0px;
@@ -204,7 +241,6 @@ margin-left: 15px;
   margin-left: 220px;
   height:50px;
   position:absolute;
-
 }
 .dashimg{
  position: absolute;
@@ -231,13 +267,65 @@ left:1170px
 }
 .navbarr{
   display: flex;
-  align-items: center;
-  padding:20px;
-  margin:0 auto;
-  
-
+  padding:10px;
+  margin:10;
 }
 .addbtn{
   color: #06E775;
   margin-left: 10px;
+}
+.five {
+  background-Color:#06E775;
+  padding:5px;
+  border-radius: 3px;
+  margin-left: 70px;
+}
+.count{
+  background-Color:#F3C294;
+  padding:5px;
+  border-radius: 3px;
+margin-left: 60px;
+}
+.profile-body{
+  position: relative;
+}
+.profile-body .profileBg{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3); 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.profile-body .profile{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  padding: 0px 50px;
+  font-size: 14px;
+  padding-top: 70px;
+  overflow-y: scroll;
+}
+.profile img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.btnShow{
+  position: absolute;
+  right: 120px;
+  top:48%;
+  color:#FBDDBB;
+  font-size: 30px;
+}
+/* this is for the login icon */
+.btnSho{
+  position: absolute;
+  right: 220px;
+  top:34%;
+  color:#FBDDBB;
+  font-size: 30px;
 }
