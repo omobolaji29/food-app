@@ -5,6 +5,7 @@ import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Dashboard from './Pages/Dashboard'
 import Profile from './component/Profile';
+import Singlefood from './component/Singlefood';
 function App() {
   return (
     
@@ -17,8 +18,9 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/Register" element={<Register />} />
       <Route path="/Login" element={<Login />} />
-      <Route path="/Dashboard" element={<Dashboard/>} />
+      <Route path="/Dashboard" element={<Dashboard/>}  />
       <Route path="/Profile" element={<Profile/>} />
+      <Route path="/single" element={<Singlefood/>} />
       {/* <Route path="/Order" element={<Order/>} /> */}
       {/* <Route path="/Cart" element={<Cart/>} /> */}
       </Routes>

@@ -1,31 +1,23 @@
 import React from 'react'
 
-const DashItem = ({image, imageAlt, title, desp, price, addbtn}) => {
+const DashboardContent = ({dashmenu, setFood,setshowModal,setCart,cart}) => {
+  function updateCart(item) {
+    setCart([...cart,item])
+    console.log(cart,"bola")
+  }
   return (
-    <div className="dashitem">
-        <img src={image} alt= {imageAlt}/>
-        <h2> {title}</h2>
-        <p> {desp} </p>
-        <p>{price} <span className="addbtn" >{addbtn}</span> </p>
-        
-    </div>
-  );
-    
-}
-
-const DashboardContent = ({dashmenu}) => {
-
-  return (
-    <div>
-      
-    
+    <div> 
          {
           dashmenu && dashmenu?.map((item,index) => (
-         <DashItem image={item.menuu} imageAlt ="image for all" title={item.title} desp="The in-house pasta and chicken by chef Moose" price='$10' addbtn="Add to cart" />
-           ))
-          }  
+         <div className="dashitem" key={index} onClick={()=>{setshowModal(true); setFood(item) }}>
+         <img src={item.menuu} alt= "all"/>
+         <h2> {item.title}</h2>
+         <p> {item.desp} </p>
+         <p>{item.price} <button className="addbtn" onClick={()=>{updateCart(item);console.log(item)}}>{item.addbtn}</button> </p>
+         </div>
+          )) }  
         </div>
   )
+  
 }
-
 export default DashboardContent

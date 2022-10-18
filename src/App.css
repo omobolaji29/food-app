@@ -191,9 +191,10 @@ p{
   display: flex;
   position: relative;
 }
-
+/* for the side bar dashboard */
 .lefts{
   background-color: whitesmoke;
+  font-family: Poppins;
   width:20%;
   height: 880px;
  font-family: poppins;
@@ -210,6 +211,17 @@ p{
   top:60px;
   font-size: 30px;
 }
+/* this is to make the dashboard text active */
+#active {
+  border-radius: 4px;
+  background-color:#EFEFEF;
+ padding: 7px;
+ width: 170px;
+
+}
+#active button{
+  background-color:#EFEFEF;
+}
  
 ul{
   list-style: none;
@@ -225,15 +237,15 @@ ul{
 }
 
 .sidebar-links button:hover{
-  background-color:grey;
+  background-color:#EFEFEF;
 }
 .sidebar-links:hover{
  border-radius: 4px;
- background-color:grey;
+ background-color:#EFEFEF;
 padding: 7px;
 width: 170px;
 }
-
+/* the greeting on top of the dashboard */
 .narbar-greet{
   padding:100px;
   padding-top:0px;
@@ -241,18 +253,22 @@ width: 170px;
   margin-left: 220px;
   height:50px;
   position:absolute;
+  font-family: Poppins;
 }
 .dashimg{
  position: absolute;
 top: 40px;
 left:1170px
 }
+/* the menu on the dashboard page */
 .dashitem {
   position:relative;
   top:100px;
   padding:15px;
   float:right;
   margin:50px;
+
+  
   display: flex;
   width:16%;
   background: rgba(255, 255, 255, 0.83);
@@ -261,6 +277,19 @@ left:1170px
     align-items: center;
   text-align: center;
  }
+ .dashitem button{
+  outline: none;
+  font-family: Poppins;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+ }
+ .dashitem button:hover{
+color: #EFEFEF;
+  background-color: #06E775;
+ }
+
 
 .dashitemBox{
   background-color:red;
@@ -314,6 +343,7 @@ margin-left: 60px;
   width: 150px;
   margin-bottom: 20px;
 }
+/* this is for the register show password icon */
 .btnShow{
   position: absolute;
   right: 120px;
@@ -321,11 +351,40 @@ margin-left: 60px;
   color:#FBDDBB;
   font-size: 30px;
 }
-/* this is for the login icon */
+/* this is for the login show password icon */
 .btnSho{
   position: absolute;
   right: 220px;
   top:34%;
   color:#FBDDBB;
   font-size: 30px;
+}
+/* css for the single post page */
+.singleFoodItem{
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: 0px;
+  width:21%;
+  float: right;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  padding: 0px 50px;
+  font-size: 14px;
+  padding-top: 70px;
+  overflow-y: hidden;
+}
+.singleFoodItem img{
+  height: 230px;
+
+}
+.singleFoodBg{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3); 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
 }
