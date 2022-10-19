@@ -8,6 +8,7 @@ import food3 from '../Images/food3.svg'
 import food4 from '../Images/food4.jpg' 
 import Menu from '../component/Menu'
 import Footer from '../component/Footer'
+
  
 
 export const Home = () => {
@@ -47,6 +48,20 @@ export const Home = () => {
           </div>
         
     </div>
+    <div className="newsletter-container">
+        <div className="newsletter-text">
+            <h2>Get notified when we update!</h2>
+            <p>
+                Get notified when we add new items to our specials menu, <br />
+                update our pricelists or have promo!
+            </p>
+        </div>
+        <div className="newsletter-form">
+            <input type="text" placeholder='youremail@gmail.com'/>
+            <button>Get notified</button>
+        </div>
+    </div>
+  
    <Footer/>
     </div>
    

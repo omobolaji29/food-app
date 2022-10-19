@@ -8,11 +8,7 @@ import Profile from './component/Profile';
 import Singlefood from './component/Singlefood';
 function App() {
   return (
-    
-    
     <div className="App">
-    
-    
     <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home/>} />

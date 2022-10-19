@@ -1,19 +1,19 @@
 import React from 'react'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
-let count= 0
-function add() {
-  count= count + 1
-  document.getElementById("demo").innerText=count
-}
-function sub() {
-  count= count - 1
-  document.getElementById("demo").innerText=count
-}
+var count= 0
+// function add() {
+//   count= count + 1
+//   document.getElementById("demo").innerText=count
+// }
+// function sub() {
+//   count= count - 1
+//   document.getElementById("demo").innerText=count
+// }
 const Singlefood = ({foodItem, setshowModal}) => {
 
   return (
-  <div onClick={()=> setshowModal(false)}>
-        <div className="singleFoodBg"></div>
+  <div>
+        <div className="singleFoodBg" onClick={()=> setshowModal(false)} ></div>
     
      <div className="singleFoodItem" >
      <AiOutlineArrowLeft className='go-back' onClick={()=> setshowModal(false)}/>
@@ -24,6 +24,9 @@ const Singlefood = ({foodItem, setshowModal}) => {
          {/* <button onClick={add()}>-</button>
          <span id="demo"> </span>
          <button onClick={sub()}>+</button> */}
+         <button onClick={()=> count -= 1} >-</button>
+         <span id="demo">{count} </span>
+         <button onClick={()=> count += 1}>+</button>
      </div>
 
   </div>
