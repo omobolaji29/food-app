@@ -145,6 +145,10 @@ input:focus {
    border-radius: 7px;
    text-align: center;
 }
+.button:hover{
+  cursor: pointer;
+
+}
 .register{
   display: flex;
 width: 100%;

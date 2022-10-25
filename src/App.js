@@ -17,7 +17,6 @@ function App() {
       <Route path="/Dashboard" element={<Dashboard/>}  />
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/single" element={<Singlefood/>} />
-      {/* <Route path="/Order" element={<Order/>} /> */}
       {/* <Route path="/Cart" element={<Cart/>} /> */}
       </Routes>
       </BrowserRouter>

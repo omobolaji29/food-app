@@ -4,8 +4,7 @@ import register from '../Images/register.jpg'
 import {AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link , useNavigate} from 'react-router-dom';
 import {  toast,ToastContainer } from 'react-toastify';
-
-
+import Button from '../component/Button';
 const Register = () => {
   const [form, setForm] = useState({})
   const navigate = useNavigate() 
@@ -14,15 +13,14 @@ const handleChange = (b) => {
   setForm ({...form, [b.target.name]: b.target.value})
     
 }
-
-
 const handleSubmit = (b) => {
  b.preventDefault();
-//  sessionStorage.setItem('user', JSON.stringify(form))
+ console.log('first')
+ sessionStorage.setItem('user', JSON.stringify(form))
+ navigate('/Login')
+ toast.success("user created sucessfully")
 
-//  toast.success("Sign Up Successful")
-
-//  navigate('/signin')
+ 
 }
 const togglePassword = (e) => {
   e.preventDefault();
@@ -42,10 +40,10 @@ const togglePassword = (e) => {
         </div>
         <div className="formregister" >
           <h2> Welcome to Bola's Cafe!</h2>
-       <form onSubmit={handleSubmit}>
+       <form onSubmit={(e)=>handleSubmit}>
          <input
          type ="text"
-         onChange={handleChange}
+         onChange={(e)=>handleChange}
          required
          placeholder="Your First Name:"
          name="name"
@@ -53,7 +51,7 @@ const togglePassword = (e) => {
    
         <input
          type ="email"
-         onChange={handleChange}
+         onChange={(e)=>handleChange}
          required
          placeholder="Your Email Name:"
          name="email"
@@ -62,7 +60,7 @@ const togglePassword = (e) => {
         <input
          required 
          placeholder="Your Password:"
-         onChange={handleChange}
+         onChange={(e)=>handleChange}
          id="password"
          type={passwordType}
          name="password"
@@ -70,9 +68,10 @@ const togglePassword = (e) => {
          <AiFillEye className="btnShow" onClick={togglePassword}/> :
          <AiFillEyeInvisible className="btnShow" onClick={togglePassword}/>
        }
+       <Button buttonText='Submit' onClick={handleSubmit}/> 
+    {/* <p className="p">Already have an account. <Link to="/Login">LOGIN</Link> </p> */}
    </form>
-   <buttton className='button' type="submit" value="Submit"> SIGN UP</buttton>
-    <p className="p">Already have an account. <Link to="/Login">LOGIN</Link> </p></div>
+  </div>
  
     </div>
     </>

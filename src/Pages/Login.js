@@ -3,23 +3,24 @@ import login from '../Images/login.jpg'
 import { Link , useNavigate} from 'react-router-dom';
 import  { useState } from 'react'
 import {AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-
-
-
-
+import { toast , ToastContainer} from 'react-toastify';
 const Login = () => {
-  const [form, setForm] = useState({})
-  // const navigate = useNavigate() 
-
+  const [loginData, setLoginData] = useState({})
+  const navigate = useNavigate() 
 const handleChange = (b) => {
-  setForm ({...form, [b.target.name]: b.target.value})
+  setLoginData ({...loginData, [b.target.name]: b.target.value})
     
 }
 const handleSubmit = (b) => {
   b.preventDefault();
-
+ let user = JSON.parse(sessionStorage.getItem('user'))
+ if (loginData?.email === user?.email && loginData?.password === user?.password){
+   toast.success("welcome to chop life gang")
+   navigate('/Dashboard')
+ }else{
+   toast.error("Wrong email or password")
  }
-
+ }
   const [passwordType, setpasswordType] = useState("password");
 const togglePassword = (e) => {
   e.preventDefault();
@@ -33,6 +34,7 @@ const togglePassword = (e) => {
   return (
     <div>
       <div className="login">
+      <ToastContainer />
 <div className="imglogin"><img src={login} alt='login'></img></div>
    <div className="formlogin">
     <h2> Welcome Back!</h2>
